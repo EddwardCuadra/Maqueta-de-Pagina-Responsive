@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Song Myung', serif;
+}
+
+/*Estilo General Menu*/
+.logo {
+    width: 100%;
+    max-height: 100px;
+    position: fixed;
+    display: block;
+    top: 0;
+    background: #fff;
+}
+.logo img {
+    max-height: 100px;
+}
+header {
+    font-family: 'Lobster', cursive;
+    z-index: 1000;
+    top: 0px;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background: #171717;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+#btn-menu {
+    display: none
+}
+
+header label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid #fff;
+}
+
+header label:hover {
+    cursor: pointer;
+    background: rgba(190, 0, 0, 0.7);
+}
+
+header label img {
+    max-height: 30px;
+    max-width: 30px;
+}
+.menu {
+    position: absolute;
+    flex-direction: column;
+    display: block;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu li {
+    line-height: 3rem;
+    position: relative;
+}
+
+.menu li ul {
+    position: absolute;
+}
+
+.menu a {
+    color: #fff;
+    display: block;
+    padding: 0 2.5em;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.menu a:hover {
+    cursor: pointer;
+    background: rgba(190, 0, 0, 0.7);
+}
+
+/*Primer Nivel Menu*/
+.menu > ul {
+    background: #171717;
+    display: table;
+    width: 100%;
+}
+
+.menu > ul > li {
+    float: left;
+}
+
+/*Segundo Nivel Menu*/
+.menu li li {
+    background: #171717;
+    max-height: 0;
+    transition: 0.5s;
+    overflow: hidden;
+    width: 200px;
+}
+
+.menu li:hover > ul > li {
+    max-height: 1000px;
+    overflow: visible;
+}
+
+.menu > ul > li >ul {
+    top: 100%;
+}
+
+/*Tercer Nivel Menu*/
+.menu li li li {
+    width: 250px;
+}
+
+.menu ul ul ul {
+    left: 100%;
+    top: 0;
+}
+
+/*Responsive Menu*/
+@media (max-width:768px) {
+    /*Responsive General*/
+    header {
+        position: relative;
+        display: block;
+        padding: 0;
+    }
+    .logo {
+        position: relative;
+        display: block;
+        max-height: 100px;
+    }
+    
+    header label {
+        display: block;
+    }
+    
+    .menu {
+        position: absolute;
+        margin-left: -100%;
+        transition: all 1s;
+    }
+    
+    .menu ul {
+        flex-direction: column;
+        width: 155px;
+    }
+    
+    .menu li {
+        border-top: 1px solid #fff;
+    }
+    
+    #btn-menu:checked ~ .menu {
+        transition: all 1s;
+        margin: 0;
+    }
+    
+    /*Responsive Primer Nivel Menu*/
+    .menu > ul > li {
+        width: 155px;
+    }
+
+    /*Responsive Segundo Nivel Menu*/
+    .menu li li {
+    max-width: 0;
+    transition: 0.5s;
+    overflow: hidden;
+    border-top: 1px solid #fff;
+    left: 156px;
+    }
+    
+    .menu li:hover > ul > li {
+        max-width: 1000px;
+        overflow: visible;
+    }
+    
+    .menu > ul > li >ul {
+        top: 0;
+    }
+    
+    /*Responsive Tercer Nivel Menu*/
+    .menu li li li {
+        left: 1px;
+    }
+}
+
+/*Estilo General Contenido*/
+@media (min-width:768px){
+    .contenedor {
+        clear: both;
+        margin-bottom: 50px;
+        padding-top: 150px;
+    }
+}
+
+.contenido {
+    width: 90%;
+    margin: auto;
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+
+h1:hover {
+    color: #d10000;
+}
+
+h2:hover {
+    color: #d10000;
+}
+
+h3:hover {
+    color: #d10000;
+}
+
+h2 {
+    text-align: center;
+}
+h2,h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Lobster', cursive;
+}
+
+p{
+    margin: 20px;
+    text-align: justify;
+}
+img {
+    display: block;
+    margin: auto;
+    max-height: 50%;
+    max-width: 50%;
+}
+
+/*Columnas*/
+.columnas {
+    clear: both;
+    margin: auto;
+    width: 90%;
+}
+.colum {
+    width: 50%;
+    float: left;
+}
+@media (max-width:650px){
+    .colum {
+        width: 100%;
+        float: none;
+    }
+}
+.footer {
+    text-align: center;
+    clear: both;
+    width: 100%;
+}
+/*Barra Social*/
+.social {
+	position: fixed; 
+	left: 0; 
+	top: 200px; 
+	z-index: 200; 
+}
+ 
+.social ul {
+    list-style: none;
+}
+
+.social ul li a {
+    display: inline-block;
+    background: rgba(221, 221, 221, 0.1);
+    font-size: 30px;
+    padding: 5px;
+    text-decoration: none;
+    -webkit-transition:all 500ms ease;
+    -o-transition:all 500ms ease;
+    transition:all 500ms ease; 
+}
+
+
+.social ul li a:hover {
+        border-top-right-radius: 20px;
+		background: #171717; 
+		padding: 10px 20px; 
+	}
